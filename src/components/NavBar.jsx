@@ -3,10 +3,10 @@ import { useState } from "react";
 import logo from "../assets/logo.png";
 import { navItems } from "../constants";
 
-const NavBar = () => {
+const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
-  const toggleNavBar = () => {
+  const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
 
@@ -15,7 +15,7 @@ const NavBar = () => {
       <div className="container px-4 mx-auto relative lg:text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
-            <img className="h-10 w-10 mr-2" src={logo} alt="logo" />
+            <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
             <span className="text-xl tracking-tight">VirtualR</span>
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">
@@ -37,7 +37,7 @@ const NavBar = () => {
             </a>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
-            <button onClick={toggleNavBar}>
+            <button onClick={toggleNavbar}>
               {mobileDrawerOpen ? <X /> : <Menu />}
             </button>
           </div>
@@ -69,4 +69,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
